@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Impresión 3D</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Cargador de visor 3D interactivo -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen flex flex-col">
 
+  <!-- Encabezado -->
+  <header class="py-8 text-center border-b border-slate-800 bg-slate-950">
+    <h1 class="text-4xl font-extrabold text-indigo-400">Catálogo de Impresión 3D</h1>
+    <p class="text-slate-400 mt-2">Elige un modelo y solicita tu impresión personalizada</p>
+  </header>
+
+  <!-- Grilla de Productos -->
+  <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow">
+
+    <!-- Tarjeta de Modelo 1 -->
+    <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-700 flex flex-col">
+      <img src="https://picsum.photos/400/300?random=1" alt="Modelo 1" class="w-full h-48 object-cover">
+      <div class="p-5 flex flex-col flex-grow">
+        <h3 class="text-xl font-bold text-white">Soporte Articulado</h3>
+        <p class="text-slate-400 text-sm mt-2 flex-grow">Ideal para escritorios. Disponible en Resina o PLA de alta densidad.</p>
+        <div class="mt-4 pt-4 border-t border-slate-700 flex justify-between items-center">
+          <span class="text-xs text-indigo-300 bg-indigo-950 px-2 py-1 rounded border border-indigo-800">Alta Precisión</span>
+          <a href="https://wa.me/56998282959?text=Hola!%20Me%20interesa%20encargar%20la%20impresión%20del%20modelo:%20Soporte%20Articulado" 
+             target="_blank" 
+             class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
+             Pedir Impresión
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Modelo 2 (Con visor 3D interactivo si tienes archivo .glb) -->
+    <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-700 flex flex-col">
+      <div class="w-full h-48 bg-slate-950">
+        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
+                      alt="Modelo 3D interactivo" 
+                      auto-rotate 
+                      camera-controls 
+                      style="width: 100%; height: 100%;">
+        </model-viewer>
+      </div>
+      <div class="p-5 flex flex-col flex-grow">
+        <h3 class="text-xl font-bold text-white">Figura Decorativa 3D</h3>
+        <p class="text-slate-400 text-sm mt-2 flex-grow">Interactúa con el modelo 3D arriba. Acabado detallado en resina.</p>
+        <div class="mt-4 pt-4 border-t border-slate-700 flex justify-between items-center">
+          <span class="text-xs text-indigo-300 bg-indigo-950 px-2 py-1 rounded border border-indigo-800">Vista 360°</span>
+          <a href="https://wa.me/56912345678?text=Hola!%20Me%20interesa%20encargar%20la%20impresión%20del%20modelo:%20Figura%20Decorativa%203D" 
+             target="_blank" 
+             class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
+             Pedir Impresión
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="py-6 text-center text-slate-500 text-sm border-t border-slate-800">
+    <p>© Servicos de Impresión 3D - 
+      por WhatsApp</p>
+  </footer>
+
+</body>
+</html>
